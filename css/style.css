@@ -1,0 +1,137 @@
+body {
+  background-image: url("../images/CEG-background.jpg");
+  background-size: cover;
+  color: #fff;
+  padding-bottom: 50px;
+  text-shadow: 2px 2px #00000033;
+}
+
+a {
+  color: #6fd185;
+  text-decoration: none;
+}
+
+  a:hover {
+    color: #00bf2a;
+    text-decoration: none;
+  }
+
+button, input[type="submit"] {
+  background-color: #00bf2a;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  outline: none;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+}
+
+  button:hover, input[type="submit"]:hover {
+    background-color: #009a22;
+  }
+
+  button:active, input[type="submit"]:active {
+    transform: translate(1px, 1px);
+  }
+
+  button:focus, input[type="submit"]:focus {
+    outline: none;
+  }
+
+.tile {
+  background-color: #fff;
+  color: #a2a2a2;
+  margin: 10px;
+  padding: 20px 25px;
+  text-shadow: none;
+}
+
+  .tile input[type="text"],
+  .tile input[type="email"],
+  .tile input[type="password"],
+  .tile textarea {
+    border: 2px solid #ffa56d;
+    color: #a2a2a2;
+    outline: none;
+    margin: 3px 0;
+    padding: 5px 10px;
+    width: 100%;
+  }
+
+  .tile textarea {
+    min-height: 200px;
+    resize: none;
+  }
+
+  .tile label {
+    padding: 5px 0;
+    margin: 3px 0;
+  }
+
+.overlay {
+  background-color: #00000033;
+  color: #fff;
+  text-shadow: 2px 2px #00000033;
+}
+
+  .overlay input[type="text"],
+  .overlay input[type="email"],
+  .overlay input[type="password"],
+  .overlay textarea {
+    background-color: #00000033;
+    border: none;
+    color: #fff;
+  }
+
+header {
+  align-items: center;
+  display: flex;
+  height: 150px;
+  justify-content: center;
+}
+
+  header img {
+    height: 150px;
+    margin: 20px;
+  }
+
+  header ul {
+    flex-basis: 800px;
+    text-align: right;
+  }
+
+    header ul li {
+      display: inline-block;
+      margin: 10px;
+    }
+
+      header ul li a {
+        color: #fff;
+      }
+
+      header ul li a.active,
+      header ul li a:hover {
+        color: #6fd185;
+      }
+
+      header ul li a.active:hover {
+        color: #00bf2a;
+      }
+
+main {
+  margin-top: 100px;
+}
+
+.green {
+  color: #047b1e;
+}
+
+.gray-background {
+  background-color: #e6e6e6;
+}
+
+.google-map-icon {
+  width: 55px;
+}
