@@ -13,12 +13,15 @@
         <div class="row">
           <div class="col-md-8">
             <div class="tile overlay">
-              <h3>Welcome to Celtic Entertainment Concert Portal</h3>
+              <h3 class="mx-3 py-4">Welcome to Celtic Entertainment Concert Portal</h3>
 
-              <p> We are your one-stop source for folk concerts in the Midwest.
-                  On our site you can browse our wide selection of folk music
-                  concerts and venues and read about our featured bands
-                  and artists. Register on our site today to buy your tickets!</p>
+              <div class="mx-3 pt-3 pb-4">
+                We are your one-stop source for folk concerts in the Midwest.
+                On our site you can browse our wide selection of folk music
+                <a href="concerts.php">concerts</a> and <a href="venues.php">venues</a>
+                and read about our featured <a href="bands.php">bands</a>
+                and artists. Register on our site today to buy your tickets!
+              </div>
             </div>
           </div>
 

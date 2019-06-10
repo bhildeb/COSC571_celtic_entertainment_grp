@@ -128,6 +128,14 @@ main {
   color: #047b1e;
 }
 
+.light-green {
+  color: #6fd185;
+}
+
+.error {
+  color: #ff0000;
+}
+
 .gray-background {
   background-color: #e6e6e6;
 }
