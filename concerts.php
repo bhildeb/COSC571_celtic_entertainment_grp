@@ -1,5 +1,3 @@
-<?php require_once('config.php'); ?>
-
 <html>
   <head>
     <meta charset="utf-8">
@@ -9,6 +7,27 @@
 
   <body>
     <?php include 'header.inc.php'; ?>
+
+    <?php
+
+    require_once('config.php');
+
+    // if ($isAdmin && isset($_POST['delete'])) {
+    //   $concertDeleteId = $_GET['delete'];
+    //
+    //   $query = "DELETE FROM Schedule WHERE ConcertID = ?";
+    //   $stmt = mysqli_prepare($link, $query);
+    //   mysqli_stmt_bind_param($stmt, 'i', $post_id);
+    //   mysqli_execute_stmt($stmt);
+    //   mysqli_stmt_close($stmt);
+    //
+    //   $query = "DELETE FROM Concert WHERE ConcertID = ?";
+    //   $stmt = mysqli_prepare($link, $query);
+    //   mysqli_stmt_bind_param($stmt, 'i', $post_id);
+    //   mysqli_execute_stmt($stmt);
+    //   mysqli_stmt_close($stmt);
+    // }
+    ?>
 
     <main>
       <div class="container">
@@ -59,7 +78,15 @@
                   </div>
                   <div class="col-md-2 my-2 py-3 green text-center"><?php echo $venue['Max_attendees']; ?></div>
 
-                  <?php if (isset($_SESSION['id'])) { ?>
+                  <?php if ($isAdmin) { ?>
+                    <div class="col-md-2 my-2">
+                      <button class="circle-button mt-2"><img src="images/edit-icon.png" /></button>
+                      <button type="submit" name="delete" class="circle-button mt-2 delete-button" formmethod="post"
+                                formaction="<?php echo htmlspecialchars($_SERVER["PHP_SELF"])."?delete=".$concertID; ?>">
+                        <img src="images/remove-icon.png" />
+                      </button>
+                    </div>
+                  <?php } elseif (isset($_SESSION['id'])) { ?>
                     <div class="col-md-2 my-2"><button>Buy Tickets</button></div>
                   <?php } else { ?>
                     <div class="col-md-2 my-2 text-center pt-3">
@@ -71,6 +98,9 @@
                 $index++;
               }
             } ?>
+            <div class="text-right">
+              <a class="button mt-3" href="add-concert.php">Add Concert</a>
+            </div>
           </div>
         </div>
       </div>

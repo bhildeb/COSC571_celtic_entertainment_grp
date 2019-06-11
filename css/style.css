@@ -16,7 +16,7 @@ a {
     text-decoration: none;
   }
 
-button, input[type="submit"] {
+button, input[type="submit"], .button {
   background-color: #00bf2a;
   border: none;
   color: #fff;
@@ -28,17 +28,46 @@ button, input[type="submit"] {
   text-decoration: none;
 }
 
-  button:hover, input[type="submit"]:hover {
+  .button {
+    display: inline-block;
+    margin: 5px;
+  }
+
+    .button:hover {
+      color: #fff;
+    }
+
+  button:hover, input[type="submit"]:hover, .button:hover {
     background-color: #009a22;
   }
 
-  button:active, input[type="submit"]:active {
+  button:active, input[type="submit"]:active, .button:active {
     transform: translate(1px, 1px);
   }
 
-  button:focus, input[type="submit"]:focus {
+  button:focus, input[type="submit"]:focus, .button:focus {
     outline: none;
   }
+
+  .circle-button {
+    border-radius: 30px;
+    margin: 5px;
+    padding: 15px;
+  }
+
+    .circle-button img {
+      height: 20px;
+      width: 20px;
+    }
+
+    .delete-button {
+      background-color: #fa0f18;
+    }
+
+      .delete-button:hover {
+        background-color: #bb050c;
+      }
+
 
 .tile {
   background-color: #fff;
@@ -53,6 +82,7 @@ button, input[type="submit"] {
   .tile input[type="password"],
   .tile input[type="date"],
   .tile input[type="tel"],
+  .tile select,
   .tile textarea {
     border: 2px solid #047b1e
     color: #a2a2a2;
@@ -60,6 +90,11 @@ button, input[type="submit"] {
     margin: 3px 0;
     padding: 5px 10px;
     width: 100%;
+  }
+
+  .tile option, .tile select {
+    border-radius: 0;
+    -webkit-appearance: none;
   }
 
   .tile textarea {
@@ -83,6 +118,7 @@ button, input[type="submit"] {
   .overlay input[type="password"],
   .overlay input[type="date"],
   .overlay input[type="tel"],
+  .overlay select,
   .overlay textarea {
     background-color: #00000033;
     border: none;
