@@ -108,7 +108,7 @@ button, input[type="submit"], .button {
   }
 
 .overlay {
-  background-color: #00000033;
+  background-color: #00000055;
   color: #fff;
   text-shadow: 2px 2px #00000033;
 }
@@ -120,7 +120,7 @@ button, input[type="submit"], .button {
   .overlay input[type="tel"],
   .overlay select,
   .overlay textarea {
-    background-color: #00000033;
+    background-color: #00000045;
     border: none;
     color: #fff;
   }
