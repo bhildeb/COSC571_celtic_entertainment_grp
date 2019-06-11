@@ -126,7 +126,7 @@
 
                     if (mysqli_stmt_execute($stmt)) {
                       // redirect to register success page
-                      header("location:index.php");               // change this
+                      header("location:login.php");
                     } else {
                       echo "Failed to register employee";
                     }
@@ -140,7 +140,7 @@
 
                     if (mysqli_stmt_execute($stmt)) {
                       // redirect to register success page
-                      header("location:index.php");               // change this
+                      header("location:login.php");
                     } else {
                       echo "Failed to register employee";
                     }
@@ -155,7 +155,7 @@
 
                 if (mysqli_stmt_execute($stmt)) {
                   // redirect to register success page
-                  header("location:index.php");               // change this
+                  header("location:login.php");
                 } else {
                   echo "Database error";
                 }

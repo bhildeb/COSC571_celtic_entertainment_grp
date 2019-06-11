@@ -31,7 +31,6 @@ if ((isset($_SESSION['isAdmin'])) && ($_SESSION['isAdmin']) == true) {
 
     <li><a href="concerts.php" <?php if (isPage('concerts')) { ?> class="active" <?php } ?> >Concerts</a></li>
     <li><a href="venues.php" <?php if (isPage('venues')) { ?> class="active" <?php } ?> >Venues</a></li>
-    <li><a href="bands.php" <?php if (isPage('bands')) { ?> class="active" <?php } ?> >Bands</a></li>
     <li>
 
     <?php
