@@ -18,9 +18,8 @@
               <div class="mx-3 pt-3 pb-4">
                 We are your one-stop source for folk concerts in the Midwest.
                 On our site you can browse our wide selection of folk music
-                <a href="concerts.php">concerts</a> and <a href="venues.php">venues</a>
-                and read about our featured <a href="bands.php">bands</a>
-                and artists. Register on our site today to buy your tickets!
+                <a href="concerts.php">concerts</a> and <a href="venues.php">venues</a>.<br><br>
+                <a href="register.php">Register</a> on our site today to buy your tickets!
               </div>
             </div>
           </div>
