@@ -88,6 +88,44 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           $_SESSION['lname'] = $row[2];
           $_SESSION['email'] = $row[3];
 
+          // set employee privileges
+
+          $_SESSION['isEmployee'] = false;
+
+          $id = $_SESSION['id'];
+          $query = "SELECT UserID FROM Employee WHERE UserID = ?";
+
+          if ($stmt = mysqli_prepare($link, $query)) {
+            mysqli_stmt_bind_param($stmt, "i", $id);
+
+            if (mysqli_stmt_execute($stmt)) {
+              mysqli_stmt_store_result($stmt);
+
+              if (mysqli_stmt_num_rows($stmt) == 1) {
+                $_SESSION['isEmployee'] = true;
+              }
+            }
+          }
+
+          // set admin privileges
+
+          $_SESSION['isAdmin'] = false;
+
+          $id = $_SESSION['id'];
+          $query = "SELECT UserID FROM Admin WHERE UserID = ?";
+
+          if ($stmt = mysqli_prepare($link, $query)) {
+            mysqli_stmt_bind_param($stmt, "i", $id);
+
+            if (mysqli_stmt_execute($stmt)) {
+              mysqli_stmt_store_result($stmt);
+
+              if (mysqli_stmt_num_rows($stmt) == 1) {
+                $_SESSION['isAdmin'] = true;
+              }
+            }
+          }
+
           // redirect to login success page
           header("location:login-success.php");
         } else {

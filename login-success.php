@@ -18,16 +18,23 @@
               <div class="mx-3 pt-3 pb-4">
                 Welcome
                 <?php
-                  if(isset($_SESSION['id'])) {
-                    echo "<span class='light-green'>".$_SESSION['fname']." ".$_SESSION['lname']."</span>";
+                  if (isset($_SESSION['id'])) {
+                    echo "<span class='light-green'>".$_SESSION['fname']." ".$_SESSION['lname']."</span>.";
                   }
                 ?>
-                . You've made your first step towards
-                experiencing the finest folk music the Midwest has to offer.
-              </div>
-              <div class="mx-3 pt-3 pb-4">
-                Browse our <a href="concerts.php">schedule of events</a>
-                to buy your tickets today!
+
+                <?php if ($isAdmin) { ?>
+                  As an administrator you have access to add, delete, and modify content on our site.<br><br>
+                  Navigate to a page to begin.
+                <?php } elseif ($isEmployee) { ?>
+                  As an employee of Celtic Entertainment Group you have exclusive access
+                  to view unpublished future content and <a href="concerts.php">events</a>.
+                <?php } else { ?>
+                  You've made your first step towards
+                  experiencing the finest folk music the Midwest has to offer.<br><br>
+                  Browse our <a href="concerts.php">schedule of events</a>
+                  to buy your tickets today!
+                <?php } ?>
               </div>
             </div>
           </div>
